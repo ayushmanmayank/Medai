@@ -3,12 +3,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Bell } from 'lucide-react'
 import { motion } from 'framer-motion'
+import type { Route } from 'next'
 
-const links = [
-  { href: '/', label: 'Dashboard' },
-  { href: '/logs', label: 'Blockchain Logs' },
-  { href: '/forecast', label: 'Forecast' },
-  { href: '/settings', label: 'Settings' }
+const links: Array<{ href: Route; label: string }> = [
+  { href: '/' as Route, label: 'Dashboard' },
+  { href: '/logs' as Route, label: 'Blockchain Logs' },
+  { href: '/forecast' as Route, label: 'Forecast' },
+  { href: '/settings' as Route, label: 'Settings' }
 ]
 
 export default function Navbar() {
